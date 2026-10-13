@@ -185,10 +185,15 @@ footer .nap{color:var(--cream);font-weight:700}
 @media (max-width:560px){
   section{padding:3.2rem 1.05rem}
   .trust,.own,.book{padding:3.2rem 1.05rem}
-  /* The sticky call bar covers the bottom ~52px of the viewport. With the old
-     11rem bottom padding the hero's address line landed underneath it on a
-     phone. Pull the hero content up so the full block clears the bar. */
-  .hero{padding:2.4rem 1.05rem 7rem}
+  /* Phone-first fold math: banner + header eat ~190px and the sticky call bar
+     covers the bottom ~55px. Vertical centring pushed the address line under
+     that bar, so on phones the hero content is top-aligned with a tightened
+     rhythm — the whole block (headline, both CTAs, address) clears the bar. */
+  .demo-banner p{font-size:.72rem;padding:.5rem .7rem;line-height:1.45}
+  .hero{justify-content:flex-start;min-height:92svh;padding:1.6rem 1.05rem 6rem}
+  .antler{width:84px;margin-bottom:.85rem}
+  .hero .sub{margin:1rem auto 1.5rem}
+  .hero .pin{margin-top:1.1rem}
   .brand .txt{font-size:.95rem}
   .call-top{padding:.55rem .8rem;font-size:.78rem}
   .cta{width:100%;max-width:21rem}
