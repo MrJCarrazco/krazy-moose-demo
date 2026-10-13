@@ -77,5 +77,9 @@ Fixed here by a scoped restoration at the end of the sheet:
 
 Verified on the **live** URL in a single active foreground tab with `prefers-reduced-motion` emulated to `reduce`: **6/6 hero elements** (`.antler`, `.kicker`, `.hero h1`, `.hero .sub`, `.cta-row`, `.hero .pin`) have computed `opacity: 1` and a non-zero bounding box, plus all `.reveal` elements visible.
 
+## Other bugs found and fixed during this build (verified live)
+1. **Gradient headings clipped their last glyph.** `-webkit-background-clip:text` clips to the glyph box, which cut the overhang of a trailing italic character (the ″ in "5″ to 20″"). Fixed with `padding-right` on `h2 em`.
+2. **Hero address line hid behind the sticky call bar on a phone.** The banner + header take ~190px and the sticky bar covers the bottom ~55px; vertical centring pushed the `📍 405 E Herning Ave…` line underneath it. On phones the hero is now top-aligned with a tightened rhythm. Measured on a 390×844 viewport: address line bottom **759px**, sticky bar top **789px** — clear, with both CTAs and the phone number above the fold. No horizontal overflow at 390px.
+
 ## Deploy gate
 Deploy pre-approved per the demos model (precedent: `true-north-collective` → MrJCarrazco/true-north-demo). Pages repo: `MrJCarrazco/krazy-moose-demo`, main / root. The business has **not** been contacted in any way.
