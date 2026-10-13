@@ -75,7 +75,9 @@ header{position:sticky;top:0;z-index:50;display:flex;align-items:center;justify-
 section{padding:4.4rem 1.15rem;max-width:68rem;margin:0 auto;position:relative}
 .sec-kicker{font-size:.7rem;letter-spacing:.34em;text-transform:uppercase;color:var(--amber);margin-bottom:.8rem}
 h2{font-family:var(--display);font-weight:700;font-size:clamp(1.95rem,5.6vw,3rem);color:var(--cream);line-height:1.07;margin-bottom:1rem;letter-spacing:-.024em;text-wrap:balance}
-h2 em{font-style:italic;background:linear-gradient(100deg,var(--amber),var(--amber2) 55%,var(--rust));-webkit-background-clip:text;background-clip:text;color:transparent}
+/* padding-right: background-clip:text clips to the glyph box, which cuts the
+   overhang of the last italic character (e.g. the ″ in 20″). Give it room. */
+h2 em{font-style:italic;background:linear-gradient(100deg,var(--amber),var(--amber2) 55%,var(--rust));-webkit-background-clip:text;background-clip:text;color:transparent;padding-right:.1em}
 .lede{max-width:40rem;font-size:1.03rem}
 
 /* ---------- placeholder blocks ---------- */
@@ -183,6 +185,10 @@ footer .nap{color:var(--cream);font-weight:700}
 @media (max-width:560px){
   section{padding:3.2rem 1.05rem}
   .trust,.own,.book{padding:3.2rem 1.05rem}
+  /* The sticky call bar covers the bottom ~52px of the viewport. With the old
+     11rem bottom padding the hero's address line landed underneath it on a
+     phone. Pull the hero content up so the full block clears the bar. */
+  .hero{padding:2.4rem 1.05rem 7rem}
   .brand .txt{font-size:.95rem}
   .call-top{padding:.55rem .8rem;font-size:.78rem}
   .cta{width:100%;max-width:21rem}
