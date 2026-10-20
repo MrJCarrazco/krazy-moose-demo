@@ -231,10 +231,13 @@ footer .nap{color:var(--cream);font-weight:700}
   .scroll-hint{display:none}
 }
 </style>
+<meta name="legal-release" content="krazy-legal-20261019">
+<link rel="stylesheet" href="compliance.css">
 </head>
 <body>
+<a class="skip-link" href="#main-content">Skip to content</a>
 
-<div class="demo-banner"><p>UNSOLICITED DEMO by Digital Consulting Studios. Not commissioned by, affiliated with, or endorsed by Krazy Moose Subs. Public listing details checked 16 Oct 2026; confirm directly. Dashed boxes are placeholders.</p></div>
+<div class="demo-banner"><p><strong>Demo design preview — not the official business website.</strong> UNSOLICITED DEMO by Digital Consulting Studios. Not commissioned by, affiliated with, or endorsed by Krazy Moose Subs. Public listing details checked 16 Oct 2026; confirm directly. Dashed boxes are placeholders.</p></div>
 
 <header>
   <div class="brand">
@@ -253,6 +256,7 @@ footer .nap{color:var(--cream);font-weight:700}
   </div>
   <a class="call-top" href="tel:+19073578774">&#128222; (907) 357-8774</a>
 </header>
+<main id="main-content">
 
 <div class="hero">
   <canvas id="snow" aria-hidden="true"></canvas>
@@ -524,6 +528,8 @@ footer .nap{color:var(--cream);font-weight:700}
     <h2 class="reveal">A place for <em>order questions</em></h2>
     <p class="reveal">This form is a design preview only. It sends nothing, places no order and promises no response.</p>
     <form class="reveal d1" onsubmit="alert('Demo only — nothing sent and no order placed.');return false">
+      <p class="preview-notice">Disabled preview form — do not enter personal information. This layout does not send an inquiry, place an order or make a booking. No response is promised. <a href="privacy.html">Privacy notice</a>.</p>
+      <fieldset class="preview-fields" disabled>
       <label for="n">Name</label><input id="n" name="name" autocomplete="name" required>
       <label for="p">Phone</label><input id="p" name="phone" type="tel" autocomplete="tel" required>
       <label for="d">Pickup date &amp; time</label><input id="d" name="date" placeholder="e.g. Friday, 11:30 am">
@@ -531,11 +537,15 @@ footer .nap{color:var(--cream);font-weight:700}
       <label for="m">What are you after?</label><textarea id="m" name="message" rows="4" placeholder="Your menu or order questions&hellip;" required></textarea>
       <button type="submit">Preview Only — Does Not Send</button>
       <small>Not connected. Nobody at the shop receives this form. Any future ordering process and terms require the business's approval.</small>
+      </fieldset>
     </form>
   </div>
 </div>
 
+</main>
 <footer>
+  <nav class="legal-links" aria-label="Legal information"><a href="privacy.html">Privacy</a><a href="terms.html">Terms of Use</a><a href="accessibility.html">Accessibility</a></nav>
+  <p class="publisher-note">© 2026 Digital Consulting Studios — preview design; third-party rights remain with their owners.</p>
   <p class="nap">Krazy Moose Subs &middot; 405 E Herning Ave, Wasilla, AK 99654 &middot; (907) 357-8774</p>
   <p>Unsolicited demo by Digital Consulting Studios. <strong>Not commissioned by, affiliated with, or endorsed by Krazy Moose Subs.</strong></p>
   <p>Public listing information checked 16 October 2026. Menu examples and reference schedules are attributed above; confirm directly. No ratings, rankings, testimonials, awards, credentials, ownership, founding year or counter prices are asserted.</p>
